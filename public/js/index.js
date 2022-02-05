@@ -1,5 +1,6 @@
 /* eslint-disable */
-import '@babel/polyfill';
+// import '@babel/polyfill';
+import 'regenerator-runtime/runtime';
 import { displayMap } from './mapbox';
 import { login, logout } from './login';
 import { updateSettings } from './updateSettings';
@@ -41,7 +42,6 @@ if (userDataForm) {
     form.append('name', document.getElementById('name').value);
     form.append('email', document.getElementById('email').value);
     form.append('photo', document.getElementById('photo').files[0]);
-    console.log(form);
 
     updateSettings(form, 'data');
   });
