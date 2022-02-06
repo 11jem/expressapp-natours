@@ -96,6 +96,11 @@ exports.protect = catchAsync(async (req, res, next) => {
     token = req.cookies.jwt;
   }
 
+  // jwt error from logout causes error to be caught in global error handler
+  // Redirecting /me to /login at logout
+  if (token === 'loggedout')
+    res.redirect(`${req.protocol}://${req.get('host')}/login`);
+
   if (!token) {
     return next(
       new AppError('You are not logged in! Please log in to get access.', 401)
