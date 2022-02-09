@@ -85,7 +85,7 @@ app.use(mongoSanitize());
 // Data sanitization against XSS attacks
 app.use(xss());
 
-// Prevent parameter polution
+// Prevent parameter pollution
 app.use(
   hpp({
     whitelist: [
