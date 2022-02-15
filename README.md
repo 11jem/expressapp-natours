@@ -14,7 +14,7 @@ The Natours API is a REST API that can handle the HTTP verbs GET, POST, PATCH DE
 - Security
 - Authentication and Authorization
 - Stripe integration
-- API testing using Postman
+- Postman docs
 
 Read the documentation [here](https://documenter.getpostman.com/view/18724671/UVeJM5ya).
 
@@ -37,7 +37,7 @@ Visit the website [here](https://project-natours-11jem.herokuapp.com/).
 
 Both the API and the website are deployed on Heroku. The configuration variables are set in Heroku as well.
 
-## Folder structure
+## File structure
 
 1. `./controllers` - route and error handlers
 1. `./dev-data` - data imported to the database
